@@ -4,18 +4,18 @@ import argparse
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-l', action='store_true", help="affiche les valeurs')
-parser.add_argument('-a', nargs='+', help='ajouté des valeurs dans le dossier')
-parser.add_argument('-c', action='store_true", help="efface les valeurs')
+parser.add_argument('-l', action='store_true', help='affiche les valeurs')
+parser.add_argument('-a', nargs='+', help='ajouter des valeurs dans le fichier')
+parser.add_argument('-c', action='store_true', help='efface les valeurs')
 samepren = parser.add_argument_group(title='subcommands', description='parce qu on le demande avec un -s devant')
-samepren.add_argument('-s', action='store_true', help='rajoute une option derriére')
+samepren.add_argument('-s', action='store_true', help='rajoute une option derriere')
 samepren.add_argument('--max', action='store_true', help='donne la plus grand valeurs')
 samepren.add_argument('--min', action='store_true', help='donne la plus petite valeurs')
 samepren.add_argument('--moy', action='store_true', help='donne la moyenne des valeurs')
 samepren.add_argument('--sum', action='store_true', help='donne la somme des valeurs')
 latete = parser.add_argument_group(title='latete', description='groupe pour l affiche de l ordre')
 latete.add_argument('-t', action='store_true', help='affiche les valeurs dans l ordre croissant')
-latete.add_argument('--desc', action='store_true', help='affiche les valeurs dans l ordre décroissant')
+latete.add_argument('--desc', action='store_true', help='affiche les valeurs dans l ordre decroissant')
 args = parser.parse_args()
 
 list = []
